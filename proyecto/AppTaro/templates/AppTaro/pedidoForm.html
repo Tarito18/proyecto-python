@@ -1,0 +1,17 @@
+{% extends "AppTaro/padre.html" %}
+{% load static %}
+{% block ContenidoQueCambia %}
+<h3>Formulario de empleados</h3>
+<form action = "{% url 'EmpleadoForm' %}" method = "POST">{% csrf_token %}
+<table>
+{{miFormulario.as_table}}
+</table>
+<input type = "submit" value = "Enviar Formulario">
+</form> 
+{% endblock %}
+
+{% block section_name %}
+<h3>Formularios</h3>
+
+                       
+{% endblock %}

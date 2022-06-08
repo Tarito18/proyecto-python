@@ -1,0 +1,13 @@
+{% extends "AppTaro/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3>Busqueda de Empleado</h3>
+{% endblock %}
+{% block ContenidoQueCambia %}
+<form action = "{% url 'buscar' %}" method = "GET">
+<h3>ingrese datos del empleado</h3>
+<input type = "text" name = "nombre" placeholder="nombre" id = "nombre">
+<input type = "text" name = "cargo" placeholder="cargo" id = "cargo">
+<input type = "submit" value = "BUSCAR">
+</form> 
+{% endblock %}

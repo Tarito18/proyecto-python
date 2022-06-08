@@ -1,0 +1,17 @@
+{% extends "AppTaro/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3>Resultado de busqueda</h3>
+{% endblock %}
+{% block ContenidoQueCambia %}
+<h1>Estamos buscando el empleado {{nombre}} {{cargo}}</h1>
+{% if Empleado %}
+<ul>
+{% for empleado in Empleado %}
+<li>{{empleado.nombre}}</li>
+<li>{{empleado.cargo}}</li>
+<br>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
